@@ -20,4 +20,8 @@ app.include_router(chat.router, prefix=settings.API_V1_STR + "/chat", tags=["Cha
 
 @app.get("/")
 async def root():
-    return {"message": f"Welcome to {settings.PROJECT_NAME}"} 
+    return {"message": f"Welcome to {settings.PROJECT_NAME}"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"} 
