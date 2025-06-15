@@ -3,6 +3,6 @@ builder = "nixpacks"
 buildCommand = "pip install -r requirements.txt"
 
 [deploy]
-startCommand = "python run.py"
+startCommand = "python test_imports.py && python run.py"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
